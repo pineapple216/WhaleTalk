@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5DA20CFC1C481A540096F3E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA20CFB1C481A540096F3E9 /* AppDelegate.swift */; };
-		5DA20CFE1C481A540096F3E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA20CFD1C481A540096F3E9 /* ViewController.swift */; };
+		5DA20CFE1C481A540096F3E9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA20CFD1C481A540096F3E9 /* ChatViewController.swift */; };
 		5DA20D011C481A550096F3E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA20CFF1C481A550096F3E9 /* Main.storyboard */; };
 		5DA20D031C481A550096F3E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA20D021C481A550096F3E9 /* Assets.xcassets */; };
 		5DA20D061C481A550096F3E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA20D041C481A550096F3E9 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		5DA20CF81C481A540096F3E9 /* WhaleTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhaleTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA20CFB1C481A540096F3E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5DA20CFD1C481A540096F3E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5DA20CFD1C481A540096F3E9 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		5DA20D001C481A550096F3E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DA20D021C481A550096F3E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DA20D051C481A550096F3E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				5DA20CFB1C481A540096F3E9 /* AppDelegate.swift */,
-				5DA20CFD1C481A540096F3E9 /* ViewController.swift */,
+				5DA20CFD1C481A540096F3E9 /* ChatViewController.swift */,
 				5DA20CFF1C481A550096F3E9 /* Main.storyboard */,
 				5DA20D021C481A550096F3E9 /* Assets.xcassets */,
 				5DA20D041C481A550096F3E9 /* LaunchScreen.storyboard */,
@@ -135,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DA20CFE1C481A540096F3E9 /* ViewController.swift in Sources */,
+				5DA20CFE1C481A540096F3E9 /* ChatViewController.swift in Sources */,
 				5DA20CFC1C481A540096F3E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
