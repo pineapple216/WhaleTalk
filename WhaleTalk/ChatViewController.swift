@@ -18,10 +18,14 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        var localIncoming = true
+        
         
         for i in 0...10{
             let m = Message()
             m.text = String(i)
+            m.incoming = localIncoming
+            localIncoming = !localIncoming
             messages.append(m)
         }
         
@@ -35,7 +39,7 @@ class ChatViewController: UIViewController {
         let tableViewConstraints: [NSLayoutConstraint] = [
             tableView.topAnchor.constraintEqualToAnchor(view.topAnchor),
             tableView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
-            tableView.trailingAnchor.constraintEqualToAnchor(view.leadingAnchor),
+            tableView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor),
             tableView.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor)
         ]
         NSLayoutConstraint.activateConstraints(tableViewConstraints)
@@ -58,6 +62,7 @@ extension ChatViewController: UITableViewDataSource{
         let message = messages[indexPath.row]
         
         cell.messageLabel.text = message.text
+        cell.incoming(message.incoming)
         return cell
     }
 }
