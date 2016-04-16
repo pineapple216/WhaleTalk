@@ -94,7 +94,10 @@ class ChatViewController: UIViewController {
         tapRecognizer.numberOfTapsRequired = 1
         
         view.addGestureRecognizer(tapRecognizer)
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        tableView.scrollToBottom()
     }
 
     override func didReceiveMemoryWarning() {
@@ -125,6 +128,7 @@ class ChatViewController: UIViewController {
             UIView.animateWithDuration(animationDuration, animations: {
                 self.view.layoutIfNeeded()
             })
+            tableView.scrollToBottom()
         }
     }
     
@@ -134,7 +138,10 @@ class ChatViewController: UIViewController {
         message.text = text
         message.incoming = false
         messages.append(message)
-        
+        newMessageField.text = ""
+        tableView.reloadData()
+        tableView.scrollToBottom()
+        view.endEditing(true)
     }
     
 }
