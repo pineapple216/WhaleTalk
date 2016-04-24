@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         context.persistentStoreCoordinator = CDHelper.sharedInstance.coordinator
         vc.context = context
         
+        fakeData(context)
+        
         return true
     }
 
@@ -51,6 +53,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func fakeData(context: NSManagedObjectContext){
+        let dataSeeded = NSUserDefaults.standardUserDefaults().boolForKey("dataSeeded")
+        guard !dataSeeded else {return}
+        
+        let people = [("John", "Nichols"), ("Matt", "Parker")]
+        
+        for person in people{
+            let contact = NSEntityDescription.insertNewObjectForEntityForName("Contact", inManagedObjectContext: context) as! Contact
+            contact.firstName = person.0
+            contact.lastName = person.1
+        }
+        do{
+            try context.save()
+        }
+        catch{
+            print("Error saving")
+        }
+        NSUserDefaults.standardUserDefaults().setObject(true, forKey: "dataSeeded")
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 }
 

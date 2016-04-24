@@ -17,6 +17,9 @@
 		5DA20D031C481A550096F3E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA20D021C481A550096F3E9 /* Assets.xcassets */; };
 		5DA20D061C481A550096F3E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA20D041C481A550096F3E9 /* LaunchScreen.storyboard */; };
 		5DCDCEE51CC24C030022EA21 /* UITableView+Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDCEE41CC24C030022EA21 /* UITableView+Scroll.swift */; };
+		5DDD193D1CCCBB51000F6818 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD193B1CCCBB51000F6818 /* Contact+CoreDataProperties.swift */; };
+		5DDD193E1CCCBB51000F6818 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD193C1CCCBB51000F6818 /* Contact.swift */; };
+		5DDD19401CCCC243000F6818 /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD193F1CCCC243000F6818 /* NewChatViewController.swift */; };
 		5DF82E631CC52FB200364D70 /* Chat+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF82E601CC52FB200364D70 /* Chat+CoreDataProperties.swift */; };
 		5DF82E641CC52FB200364D70 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF82E611CC52FB200364D70 /* Chat.swift */; };
 		5DF82E661CC52FD900364D70 /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF82E651CC52FD900364D70 /* Message+CoreDataProperties.swift */; };
@@ -37,6 +40,9 @@
 		5DA20D051C481A550096F3E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DA20D071C481A550096F3E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DCDCEE41CC24C030022EA21 /* UITableView+Scroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Scroll.swift"; path = "../UITableView+Scroll.swift"; sourceTree = "<group>"; };
+		5DDD193B1CCCBB51000F6818 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5DDD193C1CCCBB51000F6818 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		5DDD193F1CCCC243000F6818 /* NewChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
 		5DF82E601CC52FB200364D70 /* Chat+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Chat+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5DF82E611CC52FB200364D70 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		5DF82E651CC52FD900364D70 /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -58,6 +64,8 @@
 		5DA20CEF1C481A540096F3E9 = {
 			isa = PBXGroup;
 			children = (
+				5DDD193B1CCCBB51000F6818 /* Contact+CoreDataProperties.swift */,
+				5DDD193C1CCCBB51000F6818 /* Contact.swift */,
 				5DF82E651CC52FD900364D70 /* Message+CoreDataProperties.swift */,
 				5DF82E601CC52FB200364D70 /* Chat+CoreDataProperties.swift */,
 				5D0B45C21CC3BC980072859B /* Message.swift */,
@@ -82,6 +90,7 @@
 				5DA20CFD1C481A540096F3E9 /* ChatViewController.swift */,
 				5D08AEAC1C8461C2001F20F0 /* MessageCell.swift */,
 				5DF82E691CC536FD00364D70 /* AllChatsViewController.swift */,
+				5DDD193F1CCCC243000F6818 /* NewChatViewController.swift */,
 				5DF82E671CC5328200364D70 /* ChatCell.swift */,
 				5DCDCEE41CC24C030022EA21 /* UITableView+Scroll.swift */,
 				5D0B45BC1CC3B6AA0072859B /* CDHelper.swift */,
@@ -170,9 +179,12 @@
 				5D0B45BD1CC3B6AA0072859B /* CDHelper.swift in Sources */,
 				5DF82E681CC5328200364D70 /* ChatCell.swift in Sources */,
 				5D0B45C01CC3BB350072859B /* Model.xcdatamodeld in Sources */,
+				5DDD19401CCCC243000F6818 /* NewChatViewController.swift in Sources */,
 				5D08AEAD1C8461C2001F20F0 /* MessageCell.swift in Sources */,
 				5DF82E641CC52FB200364D70 /* Chat.swift in Sources */,
+				5DDD193E1CCCBB51000F6818 /* Contact.swift in Sources */,
 				5DF82E6A1CC536FD00364D70 /* AllChatsViewController.swift in Sources */,
+				5DDD193D1CCCBB51000F6818 /* Contact+CoreDataProperties.swift in Sources */,
 				5D0B45C41CC3BC980072859B /* Message.swift in Sources */,
 				5DF82E631CC52FB200364D70 /* Chat+CoreDataProperties.swift in Sources */,
 				5DA20CFE1C481A540096F3E9 /* ChatViewController.swift in Sources */,
