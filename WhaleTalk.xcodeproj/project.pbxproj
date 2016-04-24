@@ -21,6 +21,7 @@
 		5DDD193E1CCCBB51000F6818 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD193C1CCCBB51000F6818 /* Contact.swift */; };
 		5DDD19401CCCC243000F6818 /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD193F1CCCC243000F6818 /* NewChatViewController.swift */; };
 		5DDD19421CCCE2E1000F6818 /* TableViewFetchedResultsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD19411CCCE2E1000F6818 /* TableViewFetchedResultsDelegate.swift */; };
+		5DDD19441CCCE85A000F6818 /* UIViewController+FillWithView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD19431CCCE85A000F6818 /* UIViewController+FillWithView.swift */; };
 		5DF82E631CC52FB200364D70 /* Chat+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF82E601CC52FB200364D70 /* Chat+CoreDataProperties.swift */; };
 		5DF82E641CC52FB200364D70 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF82E611CC52FB200364D70 /* Chat.swift */; };
 		5DF82E661CC52FD900364D70 /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF82E651CC52FD900364D70 /* Message+CoreDataProperties.swift */; };
@@ -45,6 +46,7 @@
 		5DDD193C1CCCBB51000F6818 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		5DDD193F1CCCC243000F6818 /* NewChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
 		5DDD19411CCCE2E1000F6818 /* TableViewFetchedResultsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewFetchedResultsDelegate.swift; sourceTree = "<group>"; };
+		5DDD19431CCCE85A000F6818 /* UIViewController+FillWithView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+FillWithView.swift"; sourceTree = "<group>"; };
 		5DF82E601CC52FB200364D70 /* Chat+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Chat+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5DF82E611CC52FB200364D70 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		5DF82E651CC52FD900364D70 /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				5DF82E671CC5328200364D70 /* ChatCell.swift */,
 				5DCDCEE41CC24C030022EA21 /* UITableView+Scroll.swift */,
 				5DDD19411CCCE2E1000F6818 /* TableViewFetchedResultsDelegate.swift */,
+				5DDD19431CCCE85A000F6818 /* UIViewController+FillWithView.swift */,
 				5D0B45BC1CC3B6AA0072859B /* CDHelper.swift */,
 				5D0B45BE1CC3BB350072859B /* Model.xcdatamodeld */,
 				5DA20CFF1C481A550096F3E9 /* Main.storyboard */,
@@ -187,6 +190,7 @@
 				5D08AEAD1C8461C2001F20F0 /* MessageCell.swift in Sources */,
 				5DF82E641CC52FB200364D70 /* Chat.swift in Sources */,
 				5DDD193E1CCCBB51000F6818 /* Contact.swift in Sources */,
+				5DDD19441CCCE85A000F6818 /* UIViewController+FillWithView.swift in Sources */,
 				5DF82E6A1CC536FD00364D70 /* AllChatsViewController.swift in Sources */,
 				5DDD193D1CCCBB51000F6818 /* Contact+CoreDataProperties.swift in Sources */,
 				5D0B45C41CC3BC980072859B /* Message.swift in Sources */,

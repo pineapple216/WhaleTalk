@@ -28,19 +28,11 @@ class NewChatViewController: UIViewController, TableViewFetchedResultsDisplayer 
         automaticallyAdjustsScrollViewInsets = false
         
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifer)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
+
         tableView.dataSource = self
         tableView.delegate = self
         
-        view.addSubview(tableView)
-        
-        let tableViewConstraints: [NSLayoutConstraint] = [
-            tableView.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor),
-            tableView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
-            tableView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor),
-            tableView.bottomAnchor.constraintEqualToAnchor(bottomLayoutGuide.topAnchor)
-        ]
-        NSLayoutConstraint.activateConstraints(tableViewConstraints)
+        fillViewWith(tableView)
         
         if let context = context{
             let request = NSFetchRequest(entityName: "Contact")
