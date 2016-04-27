@@ -27,6 +27,7 @@
 		5DF82E661CC52FD900364D70 /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF82E651CC52FD900364D70 /* Message+CoreDataProperties.swift */; };
 		5DF82E681CC5328200364D70 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF82E671CC5328200364D70 /* ChatCell.swift */; };
 		5DF82E6A1CC536FD00364D70 /* AllChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF82E691CC536FD00364D70 /* AllChatsViewController.swift */; };
+		5DFA043E1CD0CD550048DFFF /* ChatCreationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFA043D1CD0CD550048DFFF /* ChatCreationDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		5DF82E651CC52FD900364D70 /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5DF82E671CC5328200364D70 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		5DF82E691CC536FD00364D70 /* AllChatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllChatsViewController.swift; sourceTree = "<group>"; };
+		5DFA043D1CD0CD550048DFFF /* ChatCreationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCreationDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				5DCDCEE41CC24C030022EA21 /* UITableView+Scroll.swift */,
 				5DDD19411CCCE2E1000F6818 /* TableViewFetchedResultsDelegate.swift */,
 				5DDD19431CCCE85A000F6818 /* UIViewController+FillWithView.swift */,
+				5DFA043D1CD0CD550048DFFF /* ChatCreationDelegate.swift */,
 				5D0B45BC1CC3B6AA0072859B /* CDHelper.swift */,
 				5D0B45BE1CC3BB350072859B /* Model.xcdatamodeld */,
 				5DA20CFF1C481A550096F3E9 /* Main.storyboard */,
@@ -198,6 +201,7 @@
 				5DA20CFE1C481A540096F3E9 /* ChatViewController.swift in Sources */,
 				5DF82E661CC52FD900364D70 /* Message+CoreDataProperties.swift in Sources */,
 				5DA20CFC1C481A540096F3E9 /* AppDelegate.swift in Sources */,
+				5DFA043E1CD0CD550048DFFF /* ChatCreationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
