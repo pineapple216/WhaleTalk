@@ -91,13 +91,17 @@ class ChatViewController: UIViewController {
         tableView.delegate = self
         
         tableView.estimatedRowHeight = 44
+        tableView.backgroundView = UIImageView(image: UIImage(named: "MessageBubble"))
+        tableView.separatorColor = UIColor.clearColor()
+        tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+        tableView.estimatedSectionHeaderHeight = 25
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
         
         // Make the tableView take up the entire screen
         let tableViewConstraints: [NSLayoutConstraint] = [
-            tableView.topAnchor.constraintEqualToAnchor(view.topAnchor),
+            tableView.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor),
             tableView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
             tableView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor),
             tableView.bottomAnchor.constraintEqualToAnchor(newMessageArea.topAnchor)
