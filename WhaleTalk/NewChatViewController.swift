@@ -26,7 +26,7 @@ class NewChatViewController: UIViewController, TableViewFetchedResultsDisplayer 
 
         // Do any additional setup after loading the view.
         title = "New Chat"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: "cancel")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(NewChatViewController.cancel))
         
         automaticallyAdjustsScrollViewInsets = false
         
