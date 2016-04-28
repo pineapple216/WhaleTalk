@@ -2,7 +2,7 @@
 //  Message+CoreDataProperties.swift
 //  WhaleTalk
 //
-//  Created by Koen Hendriks on 18/04/16.
+//  Created by Koen Hendriks on 28/04/16.
 //  Copyright © 2016 Koen Hendriks. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,9 +14,9 @@ import CoreData
 
 extension Message {
 
-    @NSManaged var incoming: NSNumber?
     @NSManaged var text: String?
     @NSManaged var timestamp: NSDate?
     @NSManaged var chat: Chat?
+    @NSManaged var sender: Contact?
 
 }
