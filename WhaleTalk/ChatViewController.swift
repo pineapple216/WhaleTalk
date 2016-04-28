@@ -167,6 +167,8 @@ class ChatViewController: UIViewController {
         message.text = text
         message.isIncoming = false
         message.timestamp = NSDate()
+        message.chat = chat
+        chat?.lastMessageTime = message.timestamp
         do{
             try context.save()
         }
@@ -223,6 +225,10 @@ class ChatViewController: UIViewController {
             }
             self.chat = mainContext.objectWithID(chat.objectID) as? Chat
         }
+    }
+    
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
 }
