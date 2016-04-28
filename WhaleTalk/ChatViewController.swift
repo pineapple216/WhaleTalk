@@ -112,6 +112,11 @@ class ChatViewController: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ChatViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
+        if let mainContext = context?.parentContext ?? context{
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("contextUpdated:"), name: NSManagedObjectContextObjectsDidChangeNotification, object: mainContext)
+            
+        }
+        
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(ChatViewController.handleSingleTap(_:)))
         tapRecognizer.numberOfTapsRequired = 1
         
@@ -156,12 +161,12 @@ class ChatViewController: UIViewController {
     
     func pressedSend(button: UIButton){
         guard let text = newMessageField.text where text.characters.count > 0 else {return}
+        checkTemporaryContext()
         guard let context = context else {return}
         guard let message = NSEntityDescription.insertNewObjectForEntityForName("Message", inManagedObjectContext: context) as? Message else {return}
         message.text = text
         message.isIncoming = false
         message.timestamp = NSDate()
-        addMessage(message)
         do{
             try context.save()
         }
@@ -171,8 +176,6 @@ class ChatViewController: UIViewController {
         }
         
         newMessageField.text = ""
-        tableView.reloadData()
-        tableView.scrollToBottom()
         view.endEditing(true)
     }
     
@@ -192,6 +195,34 @@ class ChatViewController: UIViewController {
         messages?.append(message)
         messages?.sortInPlace{$0.timestamp!.earlierDate($1.timestamp!) == $0.timestamp}
         sections[startDay] = messages
+    }
+    
+    func contextUpdated(notification: NSNotification){
+        guard let set = (notification.userInfo![NSInsertedObjectsKey] as? NSSet) else {return}
+        let objects = set.allObjects
+        for obj in objects{
+            guard let message = obj as? Message else {continue}
+            
+            if message.chat?.objectID == chat?.objectID {
+                addMessage(message)
+            }
+        }
+        tableView.reloadData()
+        tableView.scrollToBottom()
+    }
+    
+    func checkTemporaryContext() {
+        if let mainContext = context?.parentContext, chat = chat{
+            let tempContext = context
+            context = mainContext
+            do{
+                try tempContext?.save()
+            }
+            catch{
+                print("Error saving tempContext")
+            }
+            self.chat = mainContext.objectWithID(chat.objectID) as? Chat
+        }
     }
     
 }
