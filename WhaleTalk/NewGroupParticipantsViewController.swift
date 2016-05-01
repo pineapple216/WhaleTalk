@@ -110,6 +110,13 @@ class NewGroupParticipantsViewController: UIViewController {
         displayedContacts = selectedContacts
         tableView.reloadData()
     }
+    
+    func createChat(){
+        guard let chat = chat, context = context else {return}
+        chat.participants = NSSet(array: selectedContacts)
+        chatCreationDelegate?.created(chat: chat, inContext: context)
+        dismissViewControllerAnimated(false, completion: nil)
+    }
 
 }
 
