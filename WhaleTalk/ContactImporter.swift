@@ -10,12 +10,27 @@ import Foundation
 import CoreData
 import Contacts
 
-class ContactImporter {
+class ContactImporter: NSObject {
     
     private var context: NSManagedObjectContext
+    private var lastCNNotificationTime: NSDate?
     
     init(context: NSManagedObjectContext){
         self.context = context
+    }
+    
+    func listenForChanges(){
+        CNContactStore.authorizationStatusForEntityType(.Contacts)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "addressBookDidChange:", name: CNContactStoreDidChangeNotification, object: nil)
+    }
+    
+    func addressBookDidChange(notification: NSNotification){
+        print(notification)
+        
+        let now = NSDate()
+        guard lastCNNotificationTime == nil || now.timeIntervalSinceDate(lastCNNotificationTime!) > 1 else {return}
+        
+        lastCNNotificationTime = now
     }
     
     func formatPhoneNumber(number: CNPhoneNumber) -> String{
@@ -25,35 +40,38 @@ class ContactImporter {
     func fetch(){
         let store = CNContactStore()
         store.requestAccessForEntityType(.Contacts) { (granted, error) in
-            if granted{
-                do{
-                    let req = CNContactFetchRequest(keysToFetch: [
-                        CNContactGivenNameKey,
-                        CNContactFamilyNameKey,
-                        CNContactPhoneNumbersKey
-                    ])
-                    try store.enumerateContactsWithFetchRequest(req, usingBlock: { (cnContact, stop) in
-                        guard let contact = NSEntityDescription.insertNewObjectForEntityForName("Contact", inManagedObjectContext: self.context) as? Contact else {return}
-                        contact.firstName = cnContact.givenName
-                        contact.lastName = cnContact.familyName
-                        contact.contactId = cnContact.identifier
-                        
-                        let contactNumbers = NSMutableSet()
-                        for cnVal in cnContact.phoneNumbers{
-                            guard let cnPhoneNumber = cnVal.value as? CNPhoneNumber else {continue}
-                            guard let phoneNumber = NSEntityDescription.insertNewObjectForEntityForName("PhoneNumber", inManagedObjectContext: self.context) as? PhoneNumber else {continue}
+            
+            self.context.performBlock{
+                if granted{
+                    do{
+                        let req = CNContactFetchRequest(keysToFetch: [
+                            CNContactGivenNameKey,
+                            CNContactFamilyNameKey,
+                            CNContactPhoneNumbersKey
+                            ])
+                        try store.enumerateContactsWithFetchRequest(req, usingBlock: { (cnContact, stop) in
+                            guard let contact = NSEntityDescription.insertNewObjectForEntityForName("Contact", inManagedObjectContext: self.context) as? Contact else {return}
+                            contact.firstName = cnContact.givenName
+                            contact.lastName = cnContact.familyName
+                            contact.contactId = cnContact.identifier
+
                             
-                            phoneNumber.value = self.formatPhoneNumber(cnPhoneNumber)
-                            contactNumbers.addObject(phoneNumber)
-                        }
-                        contact.phoneNumbers = contactNumbers
-                    })
-                }
-                catch let error as NSError {
-                    print(error)
-                }
-                catch{
-                    print("Error with do-catch")
+                            for cnVal in cnContact.phoneNumbers{
+                                guard let cnPhoneNumber = cnVal.value as? CNPhoneNumber else {continue}
+                                guard let phoneNumber = NSEntityDescription.insertNewObjectForEntityForName("PhoneNumber", inManagedObjectContext: self.context) as? PhoneNumber else {continue}
+                                
+                                phoneNumber.value = self.formatPhoneNumber(cnPhoneNumber)
+                                phoneNumber.contact = contact
+                            }
+                        })
+                        try self.context.save()
+                    }
+                    catch let error as NSError {
+                        print(error)
+                    }
+                    catch{
+                        print("Error with do-catch")
+                    }
                 }
             }
         }
