@@ -20,6 +20,7 @@ class ContactsViewController: UIViewController, ContextViewController, TableView
     private var fetchedResultsController: NSFetchedResultsController?
     private var fetchedResultsDelegate: NSFetchedResultsControllerDelegate?
     
+    private var searchController: UISearchController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,14 @@ class ContactsViewController: UIViewController, ContextViewController, TableView
                 print("There was a problem fetching")
             }
         }
+        
+        let resultsVC = ContactsSearchResultsController()
+        resultsVC.contacts = fetchedResultsController?.fetchedObjects as! [Contact]
+        searchController = UISearchController(searchResultsController: resultsVC)
+        searchController?.searchResultsUpdater = resultsVC
+        definesPresentationContext = true
+        
+        tableView.tableHeaderView = searchController?.searchBar
     }
 
     override func didReceiveMemoryWarning() {

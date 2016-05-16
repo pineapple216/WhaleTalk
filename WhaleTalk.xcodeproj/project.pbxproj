@@ -17,6 +17,7 @@
 		5D3E7E061CD23B700089B8E1 /* NewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3E7E051CD23B700089B8E1 /* NewGroupViewController.swift */; };
 		5D5C64161CE8B1CE00A4534A /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5C64151CE8B1CE00A4534A /* ContactsViewController.swift */; };
 		5D6B15491CE38EC10057049A /* ContextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6B15481CE38EC10057049A /* ContextViewController.swift */; };
+		5D8823CB1CE9D19F00658AF3 /* ContactsSearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8823CA1CE9D19F00658AF3 /* ContactsSearchResultsController.swift */; };
 		5DA20CFC1C481A540096F3E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA20CFB1C481A540096F3E9 /* AppDelegate.swift */; };
 		5DA20CFE1C481A540096F3E9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA20CFD1C481A540096F3E9 /* ChatViewController.swift */; };
 		5DA20D011C481A550096F3E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA20CFF1C481A550096F3E9 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		5D3E7E051CD23B700089B8E1 /* NewGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroupViewController.swift; sourceTree = "<group>"; };
 		5D5C64151CE8B1CE00A4534A /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		5D6B15481CE38EC10057049A /* ContextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextViewController.swift; sourceTree = "<group>"; };
+		5D8823CA1CE9D19F00658AF3 /* ContactsSearchResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsSearchResultsController.swift; sourceTree = "<group>"; };
 		5DA20CF81C481A540096F3E9 /* WhaleTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhaleTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA20CFB1C481A540096F3E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DA20CFD1C481A540096F3E9 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				5D5C64151CE8B1CE00A4534A /* ContactsViewController.swift */,
 				5D6B15481CE38EC10057049A /* ContextViewController.swift */,
 				5D39D8B01CE9C6B50012423B /* TableViewFetchedResultsDisplayer.swift */,
+				5D8823CA1CE9D19F00658AF3 /* ContactsSearchResultsController.swift */,
 				5D3E7DFD1CD230AF0089B8E1 /* ContactsVC */,
 				5D3E7DFE1CD230BB0089B8E1 /* AllChatsVC */,
 				5D3E7DFF1CD230D40089B8E1 /* NewChatVC */,
@@ -309,6 +312,7 @@
 				5D0B45C41CC3BC980072859B /* Message.swift in Sources */,
 				5D3E7E061CD23B700089B8E1 /* NewGroupViewController.swift in Sources */,
 				5DF82E631CC52FB200364D70 /* Chat+CoreDataProperties.swift in Sources */,
+				5D8823CB1CE9D19F00658AF3 /* ContactsSearchResultsController.swift in Sources */,
 				5DA20CFE1C481A540096F3E9 /* ChatViewController.swift in Sources */,
 				5DF82E661CC52FD900364D70 /* Message+CoreDataProperties.swift in Sources */,
 				5DA20CFC1C481A540096F3E9 /* AppDelegate.swift in Sources */,
