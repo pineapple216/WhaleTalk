@@ -11,6 +11,7 @@
 		5D0B45BD1CC3B6AA0072859B /* CDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B45BC1CC3B6AA0072859B /* CDHelper.swift */; };
 		5D0B45C01CC3BB350072859B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B45BE1CC3BB350072859B /* Model.xcdatamodeld */; };
 		5D0B45C41CC3BC980072859B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B45C21CC3BC980072859B /* Message.swift */; };
+		5D158E601CF4D25A007C2A42 /* ContactSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D158E5F1CF4D25A007C2A42 /* ContactSelector.swift */; };
 		5D39D8B11CE9C6B50012423B /* TableViewFetchedResultsDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D39D8B01CE9C6B50012423B /* TableViewFetchedResultsDisplayer.swift */; };
 		5D3DAFBE1CD636C2008E85AB /* PhoneNumber+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DAFBC1CD636C2008E85AB /* PhoneNumber+CoreDataProperties.swift */; };
 		5D3DAFBF1CD636C2008E85AB /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DAFBD1CD636C2008E85AB /* PhoneNumber.swift */; };
@@ -44,6 +45,7 @@
 		5D0B45BC1CC3B6AA0072859B /* CDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDHelper.swift; sourceTree = "<group>"; };
 		5D0B45BF1CC3BB350072859B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		5D0B45C21CC3BC980072859B /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		5D158E5F1CF4D25A007C2A42 /* ContactSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactSelector.swift; sourceTree = "<group>"; };
 		5D39D8B01CE9C6B50012423B /* TableViewFetchedResultsDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewFetchedResultsDisplayer.swift; sourceTree = "<group>"; };
 		5D3DAFBC1CD636C2008E85AB /* PhoneNumber+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhoneNumber+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5D3DAFBD1CD636C2008E85AB /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
@@ -88,6 +90,8 @@
 		5D3E7DFD1CD230AF0089B8E1 /* ContactsVC */ = {
 			isa = PBXGroup;
 			children = (
+				5D5C64151CE8B1CE00A4534A /* ContactsViewController.swift */,
+				5D8823CA1CE9D19F00658AF3 /* ContactsSearchResultsController.swift */,
 			);
 			name = ContactsVC;
 			sourceTree = "<group>";
@@ -112,7 +116,10 @@
 		5D3E7E001CD230E40089B8E1 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				5D6B15481CE38EC10057049A /* ContextViewController.swift */,
+				5D158E5F1CF4D25A007C2A42 /* ContactSelector.swift */,
 				5DDD19411CCCE2E1000F6818 /* TableViewFetchedResultsDelegate.swift */,
+				5D39D8B01CE9C6B50012423B /* TableViewFetchedResultsDisplayer.swift */,
 				5DFA043D1CD0CD550048DFFF /* ChatCreationDelegate.swift */,
 			);
 			name = Protocols;
@@ -201,10 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				5DA20CFB1C481A540096F3E9 /* AppDelegate.swift */,
-				5D5C64151CE8B1CE00A4534A /* ContactsViewController.swift */,
-				5D6B15481CE38EC10057049A /* ContextViewController.swift */,
-				5D39D8B01CE9C6B50012423B /* TableViewFetchedResultsDisplayer.swift */,
-				5D8823CA1CE9D19F00658AF3 /* ContactsSearchResultsController.swift */,
 				5D3E7DFD1CD230AF0089B8E1 /* ContactsVC */,
 				5D3E7DFE1CD230BB0089B8E1 /* AllChatsVC */,
 				5D3E7DFF1CD230D40089B8E1 /* NewChatVC */,
@@ -312,6 +315,7 @@
 				5D0B45C41CC3BC980072859B /* Message.swift in Sources */,
 				5D3E7E061CD23B700089B8E1 /* NewGroupViewController.swift in Sources */,
 				5DF82E631CC52FB200364D70 /* Chat+CoreDataProperties.swift in Sources */,
+				5D158E601CF4D25A007C2A42 /* ContactSelector.swift in Sources */,
 				5D8823CB1CE9D19F00658AF3 /* ContactsSearchResultsController.swift in Sources */,
 				5DA20CFE1C481A540096F3E9 /* ChatViewController.swift in Sources */,
 				5DF82E661CC52FD900364D70 /* Message+CoreDataProperties.swift in Sources */,
