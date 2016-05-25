@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     private var contactImporter: ContactImporter?
+    private var contactsSyncer: Syncer?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -24,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let contactsContext = NSManagedObjectContext(concurrencyType: .PrivateQueueConcurrencyType)
         contactsContext.persistentStoreCoordinator = CDHelper.sharedInstance.coordinator
+        
+        contactsSyncer = Syncer(mainContext: mainContext, backgroundContext: contactsContext)
         
         contactImporter = ContactImporter(context: contactsContext)
         importContacts(contactsContext)
