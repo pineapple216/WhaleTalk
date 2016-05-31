@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import CoreData
 
 protocol RemoteStore {
     func signUp(phonenumber phoneNumber: String, email: String, password: String, succes: () -> (), error:(errorMessage: String) -> ())
+    func startSyncing()
+    func store(inserted inserted: [NSManagedObject], updated: [NSManagedObject], deleted: [NSManagedObject])
 }

@@ -15,6 +15,8 @@ class SignUpViewController: UIViewController {
     private let passwordField = UITextField()
     
     var remoteStore: RemoteStore?
+    var contactImporter: ContactImporter?
+    var rootViewController: UIViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,22 +70,33 @@ class SignUpViewController: UIViewController {
     }
     
     func pressedContinue(sender: UIButton){
+        sender.enabled = false
         guard let phoneNumber = phoneNumberField.text where phoneNumber.characters.count > 0
-            else {alertForError("Please include your phone number")
+            else { alertForError("Please include your phone number")
+            sender.enabled = true
             return
         }
         guard let email = emailField.text where email.characters.count > 0
             else{ alertForError("Please include your email address")
+            sender.enabled = true
             return
         }
         guard let password = passwordField.text where password.characters.count >= 6
-            else {alertForError("Password must be at least 6 characters")
+            else { alertForError("Password must be at least 6 characters")
+            sender.enabled = true
             return
         }
         remoteStore?.signUp(phonenumber: phoneNumber, email: email, password: password, succes: {
+            guard let rootVC = self.rootViewController, remoteStore = self.remoteStore, contactImporter = self.contactImporter else {return}
+            remoteStore.startSyncing()
+            contactImporter.fetch()
+            contactImporter.listenForChanges()
             
+            self.presentViewController(rootVC, animated: true, completion: nil)
             }, error: {
                 errorString in
+                self.alertForError(errorString)
+                sender.enabled = true
         })
     }
     
