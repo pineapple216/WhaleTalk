@@ -14,6 +14,8 @@ class SignUpViewController: UIViewController {
     private let emailField = UITextField()
     private let passwordField = UITextField()
     
+    var remoteStore: RemoteStore?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -66,6 +68,30 @@ class SignUpViewController: UIViewController {
     }
     
     func pressedContinue(sender: UIButton){
+        guard let phoneNumber = phoneNumberField.text where phoneNumber.characters.count > 0
+            else {alertForError("Please include your phone number")
+            return
+        }
+        guard let email = emailField.text where email.characters.count > 0
+            else{ alertForError("Please include your email address")
+            return
+        }
+        guard let password = passwordField.text where password.characters.count >= 6
+            else {alertForError("Password must be at least 6 characters")
+            return
+        }
+        remoteStore?.signUp(phonenumber: phoneNumber, email: email, password: password, succes: {
+            
+            }, error: {
+                errorString in
+        })
+    }
+    
+    private func alertForError(error: String){
+        let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alertController.addAction(okAction)
         
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 }
