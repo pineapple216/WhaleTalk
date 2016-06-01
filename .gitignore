@@ -67,3 +67,34 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+Pods/Firebase/Empty.m
+Pods/Firebase/FAuthData.h
+Pods/Firebase/FAuthType.h
+Pods/Firebase/FConfig.h
+Pods/Firebase/FDataSnapshot.h
+Pods/Firebase/FEventType.h
+Pods/Firebase/Firebase.h
+Pods/Firebase/FirebaseApp.h
+Pods/Firebase/FirebaseServerValue.h
+Pods/Firebase/FMutableData.h
+Pods/Firebase/FQuery.h
+Pods/Firebase/FTransactionResult.h
+Pods/Firebase/libFirebaseStatic.a
+Pods/Firebase/Firebase.framework/Firebase
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Target Support Files/Firebase/Firebase-dummy.m
+Pods/Target Support Files/Firebase/Firebase-prefix.pch
+Pods/Target Support Files/Firebase/Firebase-umbrella.h
+Pods/Target Support Files/Firebase/Firebase.modulemap
+Pods/Target Support Files/Firebase/Firebase.xcconfig
+Pods/Target Support Files/Firebase/Info.plist
+Pods/Target Support Files/Pods-WhaleTalk/Info.plist
+Pods/Target Support Files/Pods-WhaleTalk/Pods-WhaleTalk-acknowledgements.markdown
+Pods/Target Support Files/Pods-WhaleTalk/Pods-WhaleTalk-acknowledgements.plist
+Pods/Target Support Files/Pods-WhaleTalk/Pods-WhaleTalk-dummy.m
+Pods/Target Support Files/Pods-WhaleTalk/Pods-WhaleTalk-frameworks.sh
+Pods/Target Support Files/Pods-WhaleTalk/Pods-WhaleTalk-resources.sh
+Pods/Target Support Files/Pods-WhaleTalk/Pods-WhaleTalk-umbrella.h
+Pods/Target Support Files/Pods-WhaleTalk/Pods-WhaleTalk.debug.xcconfig
+Pods/Target Support Files/Pods-WhaleTalk/Pods-WhaleTalk.modulemap
+Pods/Target Support Files/Pods-WhaleTalk/Pods-WhaleTalk.release.xcconfig
