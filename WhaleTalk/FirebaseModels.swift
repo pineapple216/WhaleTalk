@@ -11,5 +11,5 @@ import Firebase
 import CoreData
 
 protocol FirebaseModel {
-    func upload(rootRef: FirebaseStore, context: NSManagedObjectContext)
+    func upload(rootRef: Firebase, context: NSManagedObjectContext)
 }
