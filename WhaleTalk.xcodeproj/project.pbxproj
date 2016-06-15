@@ -35,6 +35,7 @@
 		5DA20D011C481A550096F3E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA20CFF1C481A550096F3E9 /* Main.storyboard */; };
 		5DA20D031C481A550096F3E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA20D021C481A550096F3E9 /* Assets.xcassets */; };
 		5DA20D061C481A550096F3E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA20D041C481A550096F3E9 /* LaunchScreen.storyboard */; };
+		5DB3A3E81D11C9D200F143AE /* FirebaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB3A3E71D11C9D200F143AE /* FirebaseModels.swift */; };
 		5DCBA09C1CD283CF00104F6C /* NewGroupParticipantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCBA09B1CD283CF00104F6C /* NewGroupParticipantsViewController.swift */; };
 		5DCDCEE51CC24C030022EA21 /* UITableView+Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDCEE41CC24C030022EA21 /* UITableView+Scroll.swift */; };
 		5DDAC6251CFB3C47004E9052 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDAC6241CFB3C47004E9052 /* SignUpViewController.swift */; };
@@ -82,6 +83,7 @@
 		5DA20D021C481A550096F3E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DA20D051C481A550096F3E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DA20D071C481A550096F3E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DB3A3E71D11C9D200F143AE /* FirebaseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseModels.swift; sourceTree = "<group>"; };
 		5DCBA09B1CD283CF00104F6C /* NewGroupParticipantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroupParticipantsViewController.swift; sourceTree = "<group>"; };
 		5DCDCEE41CC24C030022EA21 /* UITableView+Scroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Scroll.swift"; path = "../UITableView+Scroll.swift"; sourceTree = "<group>"; };
 		5DDAC6241CFB3C47004E9052 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				5DDAC6241CFB3C47004E9052 /* SignUpViewController.swift */,
 				5D992BBA1CFE07F000B4F372 /* RemoteStore.swift */,
 				5D65B9B71CFF3F3B00C7DB62 /* FirebaseStore.swift */,
+				5DB3A3E71D11C9D200F143AE /* FirebaseModels.swift */,
 				5D3E7DFD1CD230AF0089B8E1 /* ContactsVC */,
 				5D3E7DFE1CD230BB0089B8E1 /* AllChatsVC */,
 				5D3E7DFF1CD230D40089B8E1 /* NewChatVC */,
@@ -434,6 +437,7 @@
 				5D0B45C01CC3BB350072859B /* Model.xcdatamodeld in Sources */,
 				5DDD19401CCCC243000F6818 /* NewChatViewController.swift in Sources */,
 				5D08AEAD1C8461C2001F20F0 /* MessageCell.swift in Sources */,
+				5DB3A3E81D11C9D200F143AE /* FirebaseModels.swift in Sources */,
 				5DDAC6251CFB3C47004E9052 /* SignUpViewController.swift in Sources */,
 				5DCBA09C1CD283CF00104F6C /* NewGroupParticipantsViewController.swift in Sources */,
 				5D3DAFBE1CD636C2008E85AB /* PhoneNumber+CoreDataProperties.swift in Sources */,
