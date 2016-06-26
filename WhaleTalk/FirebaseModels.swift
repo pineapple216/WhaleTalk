@@ -37,3 +37,23 @@ extension Contact: FirebaseModel{
         }
     }
 }
+
+extension Chat: FirebaseModel{
+    func upload(rootRef: Firebase, context: NSManagedObjectContext) {
+        guard storageId == nil else {return}
+        let ref = rootRef.childByAppendingPath("chats").childByAutoId()
+        storageId = ref.key
+        var data: [String: AnyObject] = ["id" :ref.key,]
+        guard let participants = participants?.allObjects as? Contact else {return}
+        var numbers = [FirebaseStore.currentPhoneNumber! : true]
+        var userIds = [rootRef.authData.uid]
+    }
+}
+
+
+
+
+
+
+
+
