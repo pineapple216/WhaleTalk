@@ -58,12 +58,27 @@ class FirebaseStore {
         let contacts = fetchAppContacts()
         contacts.forEach(observeUserStatus)
     }
+    
+    private func observeChats(){
+        self.rootRef.childByAppendingPath("users/"+self.rootRef.authData.uid+"/chats").observeEventType(.ChildAdded, withBlock: {
+            snapshot in
+            let uid = snapshot.key
+            let chat = Chat.existing(storageId: uid, inContext: self.context) ?? Chat.new(forStorageId: uid, rootRef: self.rootRef, inContext: self.context)
+            if chat.inserted {
+                do{
+                    try self.context.save()
+                }
+                catch{}
+            }
+        })
+    }
 }
 
 extension FirebaseStore: RemoteStore{
     func startSyncing() {
         context.performBlock{
             self.observeStatusses()
+            self.observeChats()
         }
     }
     
