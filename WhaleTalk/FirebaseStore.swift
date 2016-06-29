@@ -35,11 +35,36 @@ class FirebaseStore {
         guard let model = model as? FirebaseModel else {return}
         model.upload(rootRef, context: context)
     }
+    
+    private func fetchAppContacts() -> [Contact]{
+        do{
+            let request = NSFetchRequest(entityName: "Contact")
+            request.predicate = NSPredicate(format: "storageId != nil")
+            if let results = try self.context.executeRequest(request) as? [Contact]{
+                return results
+            }
+        }
+        catch{
+            print("Error fetching context")
+        }
+        return []
+    }
+    
+    private func observeUserStatus(contact: Contact){
+        contact.observeStatus(rootRef, context: context)
+    }
+    
+    private func observeStatusses(){
+        let contacts = fetchAppContacts()
+        contacts.forEach(observeUserStatus)
+    }
 }
 
 extension FirebaseStore: RemoteStore{
     func startSyncing() {
-        
+        context.performBlock{
+            self.observeStatusses()
+        }
     }
     
     func store(inserted inserted: [NSManagedObject], updated: [NSManagedObject], deleted: [NSManagedObject]) {
